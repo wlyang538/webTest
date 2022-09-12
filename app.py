@@ -20,15 +20,21 @@ def user_list():
 def Regis():
     return render_template("Regis.html")
 
-@app.route("/get/register", methods=["GET"])
+@app.route("/do/register", methods=["GET", "POST"])
 def get_register():
-    print(request.args)
-    return "Register successful."
+    if request.method == "GET":
+         return render_template("Rigis.html")
+    else:
+        userId = request.form.get("userId")
+        pw = request.form.get("pw")
+        gender = request.form.get("sex")
+        hobby = request.form.getlist("hobby")
+        city = request.form.get("city")
+        detail = request.form.get("detail")
 
-@app.route("/post/register", methods=["POST"])
-def post_register():
-    print(request.form)
-    return "Register successful."
+        print(userId, pw, gender, hobby, city, detail)
+        return "Register successful."
+
 
 if __name__ == '__main__':
     app.run()
