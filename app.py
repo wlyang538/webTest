@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -15,6 +15,20 @@ def get_news():
 @app.route("/user/list")
 def user_list():
     return render_template("userlist.html")
+
+@app.route("/Regis")
+def Regis():
+    return render_template("Regis.html")
+
+@app.route("/get/register", methods=["GET"])
+def get_register():
+    print(request.args)
+    return "Register successful."
+
+@app.route("/post/register", methods=["POST"])
+def post_register():
+    print(request.form)
+    return "Register successful."
 
 if __name__ == '__main__':
     app.run()
