@@ -12,5 +12,9 @@ def indx():
 def get_news():
     return render_template("get_news.html")
 
+@app.route("/user/list")
+def user_list():
+    return render_template("userlist.html")
+
 if __name__ == '__main__':
     app.run()
