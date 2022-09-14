@@ -3,14 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>re</title>
+    <style>
+        .c1 {
+            color:red;
+        }
+        .c2 {
+            height: 50px;
+        }
+    </style>
+    <link rel="stylesheet" href="/static/common.css">
 </head>
 <body>
-    <h1>Register</h1>
+    <h1 class = "greenColor">Register</h1>
     <form method="post" action="/do/register">
-        <div>
+        <div style="height: 50px">
             ID: <input type="text" name = "userId"/>
         </div>
-        <div>
+        <div class="c2">
             Password: <input type = "password" name = "pw"/>
         </div>
         <div>
