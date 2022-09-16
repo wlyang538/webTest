@@ -38,7 +38,44 @@
             font-size: 12px;
             margin-right: 10px;
         }
+        .sub_header{
+            height: 100px;
 
+        }
+        .sub_container{
+            width: 1128px;
+            margin: 0 auto;
+        }
+        .sub_container .logo{
+            width: 234px;
+            height: 100px;
+            float: left;
+        }
+        .sub_container .logo a{
+            margin-top: 22px;
+            display: inline-block;
+        }
+
+        .sub_container .menu_list {
+            float: left;
+            height: 100px;
+            line-height: 100px;
+        }
+        .sub_container .menu_list a{
+            padding: 0 10px;
+            display: inline-block;
+            color: #333;
+            font-size: 16px;
+            text-decoration: none;
+        }
+         .sub_container .menu_list a:hover{
+             color: #ff6700;
+         }
+
+        .sub_container .search {
+            float: right;
+            height: 100px;
+        }
     </style>
 </head>
 <body>
@@ -59,7 +96,23 @@
             <div style="clear: both"></div>
         </div>
     </div>
-    <div class="c1">
+    <div class="sub_header">
+        <div class="sub_container">
+            <div class="logo">
+                <a href="https://www.mi.com">
+                    <img src="/static/Xiaomi-Logo.png" style="height: 56px; width: 100px" alt="">
+                </a>
+            </div>
+            <div class="menu_list">
+                <a>Mi Phone</a>
+                <a>Redmi</a>
+                <a>TV</a>
+                <a>Notebook</a>
+                <a>Mi pad</a>
+            </div>
+            <div class="search">search area</div>
+            <div style="clear:both;"> </div>
+        </div>
 
     </div>
 </body>
